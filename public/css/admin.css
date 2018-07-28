@@ -680,3 +680,8 @@ hr {
     margin-right: 20px; /* Отступ слева */
     padding-right: 10px; /* Расстояние от линии до текста */
 }
+.description{
+    margin: 22px 14px 42px 1px;
+    padding: 0px 10px 80px 20px;
+    border-left: 4px solid #bcdeff;
+}

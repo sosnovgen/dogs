@@ -19,7 +19,6 @@ use App\Http\Controllers\Controller;
 class ArticlesController extends Controller
 {
 
-
     public function index()
     {
         $articles = Article::orderBy('title') -> paginate(8);

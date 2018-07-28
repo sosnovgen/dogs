@@ -7,8 +7,15 @@
     <link rel="shortcut icon" href="{{asset('images/frontsite/icon_logo_16.png')}}" type="image/png">
     <link rel="stylesheet" href="{{asset('css/admin.css')}}">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{asset('font-awesome-4.7.0/css/font-awesome.min.css')}}">
+
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap-theme.css')}}">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{asset('css/bar.css')}}">
+    <link rel="stylesheet" href="{{asset('css/jquery-ui.css')}}">
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
             integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -93,7 +100,7 @@
             <ul class="nav line">
                 <li><a href="#">Статья</a></li>
                 <li><a href="#">Обратная связь</a></li>
-                <li><a href="#">Каталог</a></li>
+                <li><a href="{{action('GroupsController@index')}}"><span style="font-size: 19px; color: #2b669a;"><i class="fa fa-object-group"  aria-hidden="true"> Группа </i></span></a></li>
                 <li><a href="#">Наши филиалы</a></li>
                 <li><a href="#">Календарь мероприятий</a></li>
 
