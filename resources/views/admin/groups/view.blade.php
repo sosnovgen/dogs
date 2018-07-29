@@ -2,8 +2,8 @@
 @section('content')
 
         <div class="row">
-            <div class="col-md-8">
-                <button type="button" class="close" onclick="location.href='{{asset('/')}}'">&times;</button>
+            <div class="col-md-9">
+                <button type="button" class="close" onclick="location.href='{{asset('admin')}}'">&times;</button>
                 <div class="row capture">
                     <h3 class="text-center">Группа</h3>
                 </div>
@@ -26,7 +26,6 @@
                                 <td>{{$group->title}}</td>
                                 <td>{{$group->updated_at->format('d-m-Y')}}</td>
                                 <td>&nbsp;
-
                                     <a class="group_link" href="{{$group->id}}" ><i class="fa fa-trash" aria-hidden="true" style="font-size: 1.2em"></i></a>
                                 </td>
                             </tr>
@@ -43,7 +42,7 @@
                     </div>
                 @endif
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <br>
                 <div class="description small">
                     <p>* Здесь можно добавить ли отредактировать группу товара.</p>

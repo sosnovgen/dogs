@@ -21,7 +21,7 @@
             integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('bootstrap/js/bootstrap-filestyle.min.js')}}"></script>
-    <script src="{{asset('js/tale.js')}}"></script>
+    <script src="{{asset('js/dogs.js')}}"></script>
 
     <script src="{{asset('tinymce/tinymce.min.js')}}"></script>
     <script>
