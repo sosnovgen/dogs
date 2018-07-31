@@ -21,7 +21,7 @@ class ArticlesController extends Controller
         $categories = Category::all()-> sortBy('title');
         $sort = 0; //сортировка по категории отключена
 
-        return view('site.articles.view',
+        return view('admin.articles.view',
             [
                 'articles' => $articles,
                 'categories' => $categories,
@@ -38,7 +38,7 @@ class ArticlesController extends Controller
         $groups = Group::all();
         $sort = 1;
 
-        return view('site.articles.view',
+        return view('admin.articles.view',
             [
                 'articles' => $articles,
                 'categories' => $categories,
@@ -52,7 +52,7 @@ class ArticlesController extends Controller
     {
         $categories = Category::all() -> sortBy('title'); //выбираем все категории
         $groups = Group::all(); //выбираем все группы
-        return view('site.articles.create',
+        return view('admin.articles.create',
             [
                 'categories' => $categories,
                 'groups' => $groups,

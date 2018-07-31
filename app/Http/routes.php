@@ -44,3 +44,4 @@ Route::delete('/cat/{id}',
             'uses' => 'GroupsController@destroy']);
 
 
+Route::get('articlesort/{id}','ArticlesController@indexid');
