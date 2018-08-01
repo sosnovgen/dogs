@@ -7,7 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
 
-    protected $fillable=['title','content','preview','meta_description','meta_keywords','category_id','group_id','cena'];
+    protected $fillable=['title','content','preview','meta_description','meta_keywords','category_id','group_id'];
+    protected $attributes = array (
+        'meta_description' => 'Ньюфаундленд, описание породы, фото Ньюфаундленда, характер, уход, кормление, здоровье, дрессировка, цена щенков',
+        'meta_keywords' => 'Ньюфаундленд, породы собак, информация, название, описание, фото Ньюфаундленда, характер, уход, кормление, здоровье, болезни, оценка, факты, цена щенков, отзывы, дрессировка',
+    );
+
 
     public function category()
     {

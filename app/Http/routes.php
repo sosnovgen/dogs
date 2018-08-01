@@ -35,13 +35,18 @@ Route::get('/admin', 'HomeController@index');
     Route::resource('groups','GroupsController');
 
 /*-----------  delete ----------------------------------*/
-Route::delete('/cat/{id}',
+
+    Route::delete('/cat/{id}',
     [  'as' => 'cat',
         'uses' => 'CategoriesController@destroy']);
 
     Route::delete('/group/{id}',
         ['as' => 'group',
             'uses' => 'GroupsController@destroy']);
+
+    Route::delete('/article/{id}',
+    [  'as' => 'article',
+        'uses' => 'ArticlesController@destroy']);
 
 
 Route::get('articlesort/{id}','ArticlesController@indexid');

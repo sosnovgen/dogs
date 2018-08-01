@@ -1,6 +1,6 @@
-@extends('site.main')
+@extends('admin.main')
 @section('content')
-    <div class="container">
+
         <button type="button" class="close" onclick="history.back();">&times;</button>
 
         <div class="col-md-8">
@@ -9,21 +9,16 @@
 
                 <input type="hidden" name="_method" value="put">
                 <div class="row ">
-                    <h3>Редактировать товар</h3>
+                    <h3>Редактировать статью</h3>
                 </div>
                 <br>
                 <div class="row">
-                    <div class="col-md-5">
-                        <label >Название Товара</label>
+                    <div class="col-md-6">
+                        <label >Название</label>
                         <input type="text" name="title" value = "{{$article->title}}" class="form-control"><br>
                     </div>
 
-                    <div class="col-md-3">
-                        <label ><a href="#barModal2" data-toggle ="modal">Штрих-код</a></label>
-                        <input type="text" name="barcode" value="{{$article->barcode}}" class="form-control"><br>
-                    </div>
-
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <label>Картинка</label>
                         <input type="file" name="preview" value="{{asset($article->preview)}}" class="filestyle" data-buttonText=" Выбрать"><br>
 
@@ -31,9 +26,10 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-4">
-                        <label for="category_id"><a href="#treeModal" data-toggle ="modal">Категория</a></label>
-                        <select name="category_id" class="form-control" onfocus='this.size=12;' onchange='this.size=1;' onblur='this.size=1;'>
+                    <div class="col-md-6">
+                        <label for="category_id">Категория</label>
+                        <select name="category_id" class="form-control">
+
                             @foreach($categories as $category)
                                 @if($article->category_id == $category->id)
                                     <option value="{{$category->id}}" selected>{{$category->title}}</option>
@@ -45,7 +41,7 @@
                         </select><br>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <label for="group_id">Группа</label>
                         <select name="group_id" class="form-control">
 
@@ -61,26 +57,26 @@
 
                     </div>
 
-                    <div class="col-md-2">
-                        <label >Цена_покуп.</label>
-                        <input type="text" name="cena_in" value = "{{$article->cena_in}}" class="form-control"><br>
-                    </div>
-                    <div class="col-md-2">
-                        <label >Цена_прод.</label>
-                        <input type="text" name="cena_out" value = "{{$article->cena_out}}" class="form-control"><br>
-                    </div>
-
                 </div>
 
                 <div class="form-group">
-                    <label for="comment">Описание:</label>
-                    <textarea class="form-control" rows="5" id="editor" name ="content">{{$article -> content}}</textarea>
+                    <label for="comment">Текст:</label>
+                    <textarea class="form-control" rows="5" id="editor" name ="content">{{$article->content}}</textarea>
                 </div>
 
-                <br>
+                <h2>Мета</h2>
+
+
+                <label for="text">description:</label>
+                <input type="text" name="meta_description" value="{{$article->meta_description}}" class="form-control"><br>
+
+                <label for="text">keywords:</label>
+                <input type="text" name="meta_keywords" value="{{$article->meta_keywords}}" class="form-control"><br>
+
 
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                 <input type="submit" value="Сохранить" class="btn btn-default">
+
 
             </form>
 
@@ -95,9 +91,6 @@
 
             </div>
         </div>
-
-    </div>
-
 
     <!------------- Modal ----------------->
     <div class="modal fade" id="treeModal" role="dialog">

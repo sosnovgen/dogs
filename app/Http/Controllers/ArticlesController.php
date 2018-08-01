@@ -101,7 +101,7 @@ class ArticlesController extends Controller
         $article = Article::find($id); //выбираем овар для редактирования
         $categories = Category::all() -> sortBy('title'); // выбираем все категории
         $groups = Group::all(); //выбираем все группы
-        return view('site.articles.edit',
+        return view('admin.articles.edit',
             [
                 'article' => $article,
                 'categories' => $categories,
@@ -149,9 +149,6 @@ class ArticlesController extends Controller
             unlink($fileName);
         }
         $article->delete();
-
-        //удалить все атрибуты товара id.
-        $attr =  Atribute::where(['article_id' => $id])->delete();
 
         Session::flash('message', 'Товар удалён!');
         return Redirect::to('/articles');

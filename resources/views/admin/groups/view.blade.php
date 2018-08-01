@@ -36,7 +36,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <a class="pull-right" data-toggle="modal" href="#myModal2" ><i class="fa fa-plus" aria-hidden="true" style="font-size: 1.4em; color:#b92c28"></i></a>
+                        <a class="pull-right" data-toggle="modal" href="#myModal" ><i class="fa fa-plus" aria-hidden="true" style="font-size: 1.4em; color:#b92c28"></i></a>
                     </div>
                 </div>
 
