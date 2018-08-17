@@ -74,12 +74,21 @@ class ArticlesController extends Controller
 
             $all = $request->all();
             $all['preview'] = "/images/articles/" . $fileName;
+            if ($all['meta_keywords']=='') {
+                $all['meta_keywords']= '1234567';
+            }
+
 
             Article::create($all);
 
         } else {
             $all = $request->all();
             $all['preview']= "none";
+
+            if ($all['meta_keywords']=='') {
+                $all['meta_keywords']= '1234567';
+            }
+
             Article::create($all);
         }
 

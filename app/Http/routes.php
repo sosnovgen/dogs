@@ -11,9 +11,14 @@
 |
 */
 
+/*
 Route::get('/', function () {
-    return view('welcome');
+    return view('one');
 });
+*/
+
+//---------------------- Site ------------------------
+Route::get('/','FrontController@one');
 
 //---------------------- Авторизация -------------------------
 Route::auth();
