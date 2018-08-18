@@ -9,7 +9,7 @@ ul, ol {margin: 0;}
 p {margin: 0;}
 html,body{
 	font-family: 'Source Sans Pro', sans-serif;
-	background: url(../images/site/sos.png)no-repeat;
+	background: url(../images/sos.png)no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -244,12 +244,12 @@ ul.callbacks_tabs.callbacks1_tabs {
   text-decoration: none;
   height:34px;
   width: 34px;
-  background: transparent url("../images/left.png") no-repeat left top;
+  background: transparent url("../images/site/left.png") no-repeat left top;
   margin-top: -45px;
 }
 .callbacks_nav.next {
   left: auto;
-   background: transparent url("../images/right.png") no-repeat left top;
+   background: transparent url("../images/site/right.png") no-repeat left top;
   right: 0;
 }
 /*-- responsive-mediaquries --*/
@@ -355,7 +355,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 	border: none;
 }
 .b-search input[type="submit"]{
-	background: url(../images/search-icon.png) no-repeat 0px 2px;
+	background: url(../images/site/search-icon.png) no-repeat 0px 2px;
 	border: none;
 	height: 26px;
 	width: 26px;
@@ -515,11 +515,11 @@ ul.callbacks_tabs.callbacks1_tabs {
 }
 .nbs-flexisel-nav-left {
 	left:-3em;
-	background: url(../images/left.png) no-repeat 1px 1px ;
+	background: url(../images/site/left.png) no-repeat 1px 1px ;
 }
 .nbs-flexisel-nav-right {
 	right:-3em;
-	background: url(../images/right.png) no-repeat 1px 1px ;
+	background: url(../images/site/right.png) no-repeat 1px 1px ;
 }
 .banner-1 {
   margin: 0em 0.5em;
@@ -704,37 +704,37 @@ h1.m_3{
 i.icon1{
 	width: 64px;
 	height: 64px;
-	background: url(../images/cam.png)no-repeat 0px 0px ;
+	background: url(../images/site/cam.png)no-repeat 0px 0px ;
 	display: inline-block;
 }
 i.icon2{
 	width: 64px;
 	height: 64px;
-	background: url(../images/connect.png)no-repeat 0px 0px ;
+	background: url(../images/site/connect.png)no-repeat 0px 0px ;
 	display: inline-block;
 }
 i.icon3{
 	width: 64px;
 	height: 64px;
-	background: url(../images/soci.png)no-repeat 0px 0px ;
+	background: url(../images/site/soci.png)no-repeat 0px 0px ;
 	display: inline-block;
 }
 i.icon4{
 	width: 64px;
 	height: 64px;
-	background: url(../images/tech.png)no-repeat 0px 0px ;
+	background: url(../images/site/tech.png)no-repeat 0px 0px ;
 	display: inline-block;
 }
 i.icon5{
 	width: 64px;
 	height: 64px;
-	background: url(../images/alar.png)no-repeat 0px 0px ;
+	background: url(../images/site/alar.png)no-repeat 0px 0px ;
 	display: inline-block;
 }
 i.icon6{
 	width: 64px;
 	height: 64px;
-	background: url(../images/boo.png)no-repeat 0px 0px ;
+	background: url(../images/site/boo.png)no-repeat 0px 0px ;
 	display: inline-block;
 }
 .service_grid1 {
@@ -791,7 +791,7 @@ h3.m_3 {
 .blog-head-right ul li a span{
 	height:13px;
 	width:10px;
-	background:url(../images/nav-arrow.png) no-repeat 0px 0px;
+	background:url(../images/site/nav-arrow.png) no-repeat 0px 0px;
 	display:inline-block;
 	vertical-align: middle;
 	margin:0 0.5em;
@@ -844,7 +844,7 @@ h3.m_3 {
 	height: 20px;
 	width: 20px;
 	display: inline-block;
-	background: url(../images/tag.png) no-repeat 0px 0px;
+	background: url(../images/site/tag.png) no-repeat 0px 0px;
 	vertical-align: middle;
 	margin-right: 0.5em;
 }
@@ -852,7 +852,7 @@ i.adm1{
   width: 22px;
   height: 22px;
   display: inline-block;
-  background: url("../images/imzs.png") no-repeat 1px 4px;
+  background: url("../images/site/imzs.png") no-repeat 1px 4px;
   vertical-align: middle;
   margin-right: 12px;
 }
@@ -916,14 +916,14 @@ i.adm1{
 	width:13px;
 	height:17px;
 	display:inline-block;
-	background: url(../images/page-icons.png) no-repeat 1px -2px;
+	background: url(../images/site/page-icons.png) no-repeat 1px -2px;
 	vertical-align:middle;
 }
 .blog-pagenat ul li a.last span{
 	width:13px;
 	height:17px;
 	display:inline-block;
-	background:url(../images/page-icons.png) no-repeat -10px 0px;
+	background:url(../images/site/page-icons.png) no-repeat -10px 0px;
 	vertical-align:middle;
 }
 .blog-pagenat{
@@ -946,7 +946,7 @@ i.adm1{
 	border: none;
 }
 .b-search input[type="submit"]{
-	background: url(../images/search-icon.png) no-repeat 0px 2px;
+	background: url(../images/site/search-icon.png) no-repeat 0px 2px;
 	border: none;
 	height: 26px;
 	width: 26px;
@@ -961,7 +961,7 @@ i.adm1{
 	width: 24px;
 	height: 24px;
 	display: inline-block;
-	background: url(../images/twter.png) no-repeat 0px 0px;
+	background: url(../images/site/twter.png) no-repeat 0px 0px;
 	vertical-align: middle;
 	margin-right: 0.5em;
 }
@@ -1362,7 +1362,7 @@ i.tag {
   width: 17px;
   height: 16px;
   display: inline-block;
-  background: url("../images/tag.png") no-repeat 1px 1px;
+  background: url("../images/site/tag.png") no-repeat 1px 1px;
   vertical-align: middle;
   margin-right: 6px;
 }
@@ -1398,7 +1398,7 @@ i.adm {
   width: 15px;
   height: 15px;
   display: inline-block;
-  background: url("../images/imzs.png") no-repeat -85px 1px;
+  background: url("../images/site/imzs.png") no-repeat -85px 1px;
   vertical-align: middle;
   margin-right: 12px;
 }
@@ -1406,7 +1406,7 @@ i.inter {
   width: 15px;
   height: 15px;
   display: inline-block;
-  background: url("../images/imzs.png") no-repeat -211px 2px;
+  background: url("../images/site/imzs.png") no-repeat -211px 2px;
   vertical-align: middle;
   margin-right: 12px;
 }
@@ -1451,7 +1451,7 @@ a.b-home:hover{
   border-right: none;
 }
 .artical-links ul li small {
-  background: url(../images/img-sprite.png)no-repeat -9px -2px;
+  background: url(../images/site/img-sprite.png)no-repeat -9px -2px;
   width: 20px;
   height: 20px;
   display: inline-block;
@@ -1637,7 +1637,7 @@ a.b-home:hover{
 }
 .checkbox input + i:after {
   content: '';
-  background: url("../images/tick1.png") no-repeat 1px 2px;
+  background: url("../images/site/tick1.png") no-repeat 1px 2px;
   top: 2px;
   left: 2px;
   width: 15px;
@@ -1823,7 +1823,7 @@ h3.m_3 {
   right: 20px;
 }
 .head-nav span.menu:before{
-	content:url(../images/menu.png);
+	content:url(../images/site/menu.png);
 	color:#FFF;
 	text-align:right;
 	cursor:pointer;
@@ -1855,7 +1855,7 @@ h3.m_3 {
   padding: 8px;
 }
 .b-search input[type="submit"] {
-  background: url(../images/search-icon.png) no-repeat 0px 0px;
+  background: url(../images/site/search-icon.png) no-repeat 0px 0px;
 }
 .bann-left {
   float: right;

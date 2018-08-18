@@ -29,7 +29,8 @@
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700' rel='stylesheet' type='text/css'>
 
-    <script src="js/responsiveslides.min.js"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('js/responsiveslides.min.js')}}"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -78,8 +79,51 @@
 </div>
 <!-- header -->
 
+<div class="container">
+
 <div id="content">
     @yield('content')
+</div>
+
+<div class="footer">
+    <div class="col-md-3 foot-1">
+        <h4>Quick Links</h4>
+        <ul>
+            <li><a href="#">||   Lorem Ipsum passage</a></li>
+            <li><a href="#">||   Finibus Bonorum et</a></li>
+            <li><a href="#">||   Treatise on the theory</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3 foot-1">
+        <h4>Favorite Resources</h4>
+        <ul>
+            <li><a href="#">||   Characteristic words</a></li>
+            <li><a href="#">||   combined with a handful</a></li>
+            <li><a href="#">||   which looks reasonable</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3 foot-1">
+        <h4>About Us</h4>
+        <ul>
+            <li><a href="#">||  Even slightly believable</a></li>
+            <li><a href="#">||  Hidden in the middle</a></li>
+            <li><a href="#">||  Ipsum therefore always</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3 foot-1">
+        <h4>Custom Menu</h4>
+        <ul>
+            <li><a href="#">||  Internet tend to repeat</a></li>
+            <li><a href="#">||  Alteration in some form</a></li>
+            <li><a href="#">||  This book is a treatise</a></li>
+        </ul>
+    </div>
+
+    <div class="clearfix"> </div>
+    <div class="copyright">
+        <p>Copyrights © 2018 Malleka All rights reserved | Template by <a href="http://w3layouts.com/">W3layouts</a></p>
+    </div>
+</div>
 </div>
 
 </body>
