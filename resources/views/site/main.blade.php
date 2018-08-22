@@ -52,8 +52,8 @@
         <div class="head-nav">
             <span class="menu"> </span>
             <ul class="cl-effect-1">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li class="active"><a href="{{asset('/')}}">Home</a></li>
+                <li><a href="{{asset('/about')}}">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="404.html">Shortcodes</a></li>

@@ -69,7 +69,7 @@ class ArticlesController extends Controller
             $request->file('preview')->move($img_root, $fileName);
 
             $img = Image::make('images/articles/'. $fileName);
-            $img->resize(300, 300);
+            $img->resize(800,400);
             $img->save('images/articles/'. $fileName);
 
             $all = $request->all();
@@ -129,7 +129,7 @@ class ArticlesController extends Controller
             $request->file('preview')->move($img_root, $fileName);
 
             $img = Image::make('images/articles/' . $fileName);
-            $img->resize(300, 300);
+            $img->resize(1440, 900);
             $img->save('images/articles/' . $fileName);
 
             $all = $request->all();

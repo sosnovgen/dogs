@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 //---------------------- Site ------------------------
 Route::get('/','FrontController@one');
+Route::get('/about', function() { return view('site.about'); });
 
 //---------------------- Авторизация -------------------------
 Route::auth();

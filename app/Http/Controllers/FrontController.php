@@ -51,7 +51,10 @@ class FrontController extends Controller
     //Стартовая страница
     public function one()
     {
-        return view('site.start');
+        $articles=Article::orderBy('id', 'desc')-> take(4)->get();
+        //$arts[] = $articles ->toarray();
+       // return view('site.test',['arts'=>$arts]);
+        return view('site.start', ['articles'=>$articles]);
     }
 
     //-------------------------------------------------------------------

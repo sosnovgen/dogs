@@ -25,28 +25,32 @@
                                 <img src="{{asset('images/site/1.jpg')}}" class="img-responsive" alt="">
                                 <div class="caption">
                                     <h3>Maecenas malesuada elit lectus felis</h3>
-                                    <p>Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus.</p>
+                                    <p>Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo
+                                        volutpat a, convallis ac, laoreet enim. Phasellus.</p>
                                 </div>
                             </li>
                             <li>
-                                <img src="{{asset('images/site/4.jpg')}}" class="img-responsive" alt="">
+                                <img src="{{asset('images/site/2.jpg')}}" class="img-responsive" alt="">
                                 <div class="caption">
                                     <h3>Curabitur et ligula. Ut molestie </h3>
-                                    <p>Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulu. </p>
+                                    <p>Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula.
+                                        Ut molestie a, ultricies porta urna. Vestibulu. </p>
                                 </div>
                             </li>
                             <li>
                                 <img src="{{asset('images/site/5.jpg')}}" class="img-responsive" alt="">
                                 <div class="caption">
                                     <h3>Etiam ullamcorper. Suspendisse</h3>
-                                    <p>Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. </p>
+                                    <p>Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis,
+                                        malesuada ultricies. Curabitur et ligula. </p>
                                 </div>
                             </li>
                             <li>
                                 <img src="{{asset('images/site/6.jpg')}}" class="img-responsive" alt="">
                                 <div class="caption">
                                     <h3>Suspendisse a pellentesque dui</h3>
-                                    <p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada .</p>
+                                    <p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada
+                                        elit lectus felis, malesuada .</p>
                                 </div>
                             </li>
                         </ul>
@@ -54,35 +58,36 @@
                 </div>
             </div>
         </div>
+
+
         <!-- banner -->
-        <!-- nam-matis -->
+        <!-- Переменная цикла -->
+        @php ($loop = 1)
+
         <div class="nam-matis">
-            <div class="nam-matis-top">
-                <div class="col-md-6 nam-matis-1">
-                    <a href="single.html"><img src="{{asset('images/site/5.jpg')}}" class="img-responsive" alt=""></a>
-                    <h3><a href="single.html">Suspendisse a pellentesque dui</a></h3>
-                    <p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula.</p>
+            @foreach($articles as $article)
+                <div class="nam-matis-top">
+                    @if (($loop == 1) or ($loop == 3))
+                        <div class="col-md-6 nam-matis-1">
+                            <a href="single.html"><img src="{{asset($article->preview)}}" class="img-responsive" alt=""></a>
+                            <h3><a href="single.html">Suspendisse a pellentesque dui</a></h3>
+                            <p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit
+                                lectus felis, malesuada ultricies. Curabitur et ligula.</p>
+                        </div>
+                    @endif
+
+                    @if (($loop == 2) or ($loop == 4))
+                        <div class="col-md-6 nam-matis-1">
+                            <a href=""><img src="{{asset($article->preview)}}" class="img-responsive" alt=""></a>
+                            <h3><a href="">Suspendisse a pellentesque dui</a></h3>
+                            <p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit
+                                lectus felis, malesuada ultricies. Curabitur et ligula.</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    @endif
                 </div>
-                <div class="col-md-6 nam-matis-1">
-                    <a href=""><img src="{{asset('images/site/6.jpg')}}" class="img-responsive" alt=""></a>
-                    <h3><a href="">Suspendisse a pellentesque dui</a></h3>
-                    <p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula.</p>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
-            <div class="nam-matis-top">
-                <div class="col-md-6 nam-matis-1">
-                    <a href="single.html"><img src="{{asset('images/site/4.jpg')}}" class="img-responsive" alt=""></a>
-                    <h3><a href="single.html">Suspendisse a pellentesque dui</a></h3>
-                    <p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula.</p>
-                </div>
-                <div class="col-md-6 nam-matis-1">
-                    <a href="single.html"><img src="{{asset('images/site/1.jpg')}}" class="img-responsive" alt=""></a>
-                    <h3><a href="single.html">Suspendisse a pellentesque dui</a></h3>
-                    <p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula.</p>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
+                @php ($loop++)
+            @endforeach
         </div>
         <!-- nam-matis -->
     </div>
@@ -90,7 +95,8 @@
     <div class="col-md-3 bann-left">
         <div class="b-search">
             <form>
-                <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+                <input type="text" value="Search" onfocus="this.value = '';"
+                       onblur="if (this.value == '') {this.value = 'Search';}">
                 <input type="submit" value="">
             </form>
         </div>
@@ -104,7 +110,7 @@
                     <h4><a href="single.html">Little Invaders </a></h4>
                     <p>pellentesque dui, non felis. Maecenas male </p>
                 </div>
-                <div class="clearfix"> </div>
+                <div class="clearfix"></div>
             </div>
             <div class="blog-grids">
                 <div class="blog-grid-left">
@@ -114,7 +120,7 @@
                     <h4><a href="single.html">Little Invaders </a></h4>
                     <p>pellentesque dui, non felis. Maecenas male </p>
                 </div>
-                <div class="clearfix"> </div>
+                <div class="clearfix"></div>
             </div>
             <div class="blog-grids">
                 <div class="blog-grid-left">
@@ -124,17 +130,17 @@
                     <h4><a href="single.html">Little Invaders </a></h4>
                     <p>pellentesque dui, non felis. Maecenas male </p>
                 </div>
-                <div class="clearfix"> </div>
+                <div class="clearfix"></div>
             </div>
         </div>
         <h3>Categories</h3>
         <div class="blo-top">
-            <li><a href="#">||   Lorem Ipsum passage</a></li>
-            <li><a href="#">||   Finibus Bonorum et</a></li>
-            <li><a href="#">||   Treatise on the theory</a></li>
-            <li><a href="#">||   Characteristic words</a></li>
-            <li><a href="#">||   combined with a handful</a></li>
-            <li><a href="#">||   which looks reasonable</a></li>
+            <li><a href="#">|| Lorem Ipsum passage</a></li>
+            <li><a href="#">|| Finibus Bonorum et</a></li>
+            <li><a href="#">|| Treatise on the theory</a></li>
+            <li><a href="#">|| Characteristic words</a></li>
+            <li><a href="#">|| combined with a handful</a></li>
+            <li><a href="#">|| which looks reasonable</a></li>
         </div>
         <h3>Newsletter</h3>
 
@@ -149,18 +155,18 @@
                     <input type="submit" value="Subscribe">
                 </form>
             </div>
-            <div class="clearfix"> </div>
+            <div class="clearfix"></div>
         </div>
     </div>
 
 
-    <div class="clearfix"> </div>
+    <div class="clearfix"></div>
     <div class="fle-xsel">
         <ul id="flexiselDemo3">
             <li>
                 <a href="#">
                     <div class="banner-1">
-                        <img src="{{asset('images/site/6.jpg')}}" class="img-responsive" alt="">
+                        <img src="{{asset('images/site/4.jpg')}}" class="img-responsive" alt="">
                     </div>
                 </a>
             </li>
@@ -181,7 +187,7 @@
             <li>
                 <a href="#">
                     <div class="banner-1">
-                        <img src="{{asset('images/site/4.jpg')}}" class="img-responsive" alt="">
+                        <img src="{{asset('images/site/3.jpg')}}" class="img-responsive" alt="">
                     </div>
                 </a>
             </li>
@@ -202,7 +208,7 @@
         </ul>
 
         <script type="text/javascript">
-            $(window).load(function() {
+            $(window).load(function () {
 
                 $("#flexiselDemo3").flexisel({
                     visibleItems: 5,
@@ -213,15 +219,15 @@
                     enableResponsiveBreakpoints: true,
                     responsiveBreakpoints: {
                         portrait: {
-                            changePoint:480,
+                            changePoint: 480,
                             visibleItems: 2
                         },
                         landscape: {
-                            changePoint:640,
+                            changePoint: 640,
                             visibleItems: 3
                         },
                         tablet: {
-                            changePoint:768,
+                            changePoint: 768,
                             visibleItems: 3
                         }
                     }
@@ -230,7 +236,7 @@
             });
         </script>
         <script type="text/javascript" src="{{asset('js/jquery.flexisel.js')}}"></script>
-        <div class="clearfix"> </div>
+        <div class="clearfix"></div>
     </div>
 
 @stop

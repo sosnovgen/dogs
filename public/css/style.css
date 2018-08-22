@@ -9,7 +9,7 @@ ul, ol {margin: 0;}
 p {margin: 0;}
 html,body{
 	font-family: 'Source Sans Pro', sans-serif;
-	background: url(../images/sos.png)no-repeat;
+	background: url(../images/site/sos.png)no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
