@@ -15,6 +15,9 @@
         <meta name="robots" content="noindex,follow" />
     @show
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{asset('font-awesome-4.7.0/css/font-awesome.min.css')}}">
+
     <link rel="shortcut icon" href="{{asset('images/frontsite/icon_logo_16.png')}}" type="image/png">
 
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.css')}}">
@@ -54,7 +57,7 @@
             <ul class="cl-effect-1">
                 <li class="active"><a href="{{asset('/')}}">Home</a></li>
                 <li><a href="{{asset('/about')}}">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="{{asset('/gallery')}}">Gallery</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="404.html">Shortcodes</a></li>
                 <li><a href="login.html">Login</a></li>
@@ -79,11 +82,12 @@
 </div>
 <!-- header -->
 
-<div class="container">
 
+<div class="container">
 <div id="content">
     @yield('content')
 </div>
+
 
 <div class="footer">
     <div class="col-md-3 foot-1">

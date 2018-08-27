@@ -24,9 +24,10 @@
                             <li>
                                 <img src="{{asset('images/site/1.jpg')}}" class="img-responsive" alt="">
                                 <div class="caption">
-                                    <h3>Maecenas malesuada elit lectus felis</h3>
-                                    <p>Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo
-                                        volutpat a, convallis ac, laoreet enim. Phasellus.</p>
+                                    <h3>Юный Гранд Чемпион Украины</h3>
+                                    <p>Предлагется для вязки роскошный, титулованный кобель ньюфаундленда
+                                        Vivat Brave Master Super Mishka импортирован из известного украинкого питомника
+                                        Super Mishka, имеет хорошую родословную в которой собраны известные крови. </p>
                                 </div>
                             </li>
                             <li>
@@ -59,8 +60,9 @@
             </div>
         </div>
 
-
         <!-- banner -->
+
+        <!-- 4 картинки под каруселью -->
         <!-- Переменная цикла -->
         @php ($loop = 1)
 
@@ -69,19 +71,37 @@
                 <div class="nam-matis-top">
                     @if (($loop == 1) or ($loop == 3))
                         <div class="col-md-6 nam-matis-1">
-                            <a href="single.html"><img src="{{asset($article->preview)}}" class="img-responsive" alt=""></a>
-                            <h3><a href="single.html">Suspendisse a pellentesque dui</a></h3>
-                            <p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit
-                                lectus felis, malesuada ultricies. Curabitur et ligula.</p>
+                            <a href="{{action('FrontController@show',$article->id)}}"><img src="{{asset($article->preview)}}" class="img-responsive" alt=""></a>
+                            <h3><a href="{{action('FrontController@show',$article->id)}}">{{$article ->title}}</a></h3>
+
+                            @php
+                                    $string = $article -> content;
+                                    $string = strip_tags($string);
+                                    $string = substr($string, 0, 200);
+                                    $string = substr($string, 0, strrpos($string, ' '));
+                                    $string =  $string."… ";
+                            @endphp
+
+                            <p>  {{$string}} </p>
+
                         </div>
                     @endif
 
                     @if (($loop == 2) or ($loop == 4))
                         <div class="col-md-6 nam-matis-1">
-                            <a href=""><img src="{{asset($article->preview)}}" class="img-responsive" alt=""></a>
-                            <h3><a href="">Suspendisse a pellentesque dui</a></h3>
-                            <p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit
-                                lectus felis, malesuada ultricies. Curabitur et ligula.</p>
+                            <a href="{{action('FrontController@show',$article->id)}}"><img src="{{asset($article->preview)}}" class="img-responsive" alt=""></a>
+                            <h3><a href="{{action('FrontController@show',$article->id)}}">{{$article ->title}}</a></h3>
+
+                            @php
+                                $string = $article -> content;
+                                $string = strip_tags($string);
+                                $string = substr($string, 0, 200);
+                                $string = substr($string, 0, strrpos($string, ' '));
+                                $string =  $string."… ";
+                            @endphp
+
+                            <p>  {{$string}} </p>
+
                         </div>
                         <div class="clearfix"></div>
                     @endif
@@ -89,10 +109,13 @@
                 @php ($loop++)
             @endforeach
         </div>
-        <!-- nam-matis -->
+        <!-- 4 картинки под каруселью -->
+
     </div>
 
+
     <div class="col-md-3 bann-left">
+        <!-- Поиск -->
         <div class="b-search">
             <form>
                 <input type="text" value="Search" onfocus="this.value = '';"
@@ -100,39 +123,35 @@
                 <input type="submit" value="">
             </form>
         </div>
-        <h3>Recent Posts</h3>
+
+
+        <h3>Предыдущие статьи</h3>
         <div class="blo-top">
-            <div class="blog-grids">
-                <div class="blog-grid-left">
-                    <a href="single.html"><img src="{{asset('images/site/1b.jpg')}}" class="img-responsive" alt=""></a>
-                </div>
-                <div class="blog-grid-right">
-                    <h4><a href="single.html">Little Invaders </a></h4>
-                    <p>pellentesque dui, non felis. Maecenas male </p>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="blog-grids">
-                <div class="blog-grid-left">
-                    <a href="single.html"><img src="{{asset('images/site/2b.jpg')}}" class="img-responsive" alt=""></a>
-                </div>
-                <div class="blog-grid-right">
-                    <h4><a href="single.html">Little Invaders </a></h4>
-                    <p>pellentesque dui, non felis. Maecenas male </p>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="blog-grids">
-                <div class="blog-grid-left">
-                    <a href=""><img src="{{asset('images/site/3b.jpg')}}" class="img-responsive" alt=""></a>
-                </div>
-                <div class="blog-grid-right">
-                    <h4><a href="single.html">Little Invaders </a></h4>
-                    <p>pellentesque dui, non felis. Maecenas male </p>
-                </div>
-                <div class="clearfix"></div>
-            </div>
+            @php($loop=0)
+            @foreach($articles as $article)
+                @if ($loop >3)
+                    <div class="blog-grids">
+
+                        <div class="blog-grid-right">
+                            <h4><i><a href="{{action('FrontController@show',$article->id)}}">{{$article ->title}}</a></i></h4>
+                            @php
+                                $string = $article -> content;
+                                $string = strip_tags($string);
+                                $string = substr($string, 0, 60);
+                                $string = substr($string, 0, strrpos($string, ' '));
+                                $string =  $string."… ";
+                            @endphp
+
+                              {{$string}}
+
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                @endif
+              @php($loop++)
+            @endforeach
         </div>
+
         <h3>Categories</h3>
         <div class="blo-top">
             <li><a href="#">|| Lorem Ipsum passage</a></li>

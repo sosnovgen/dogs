@@ -15,7 +15,7 @@ class ArticlesController extends Controller
 {
     public function index()
     {
-        $articles = Article::orderBy('title')-> paginate(12);
+        $articles = Article::orderBy('id','desc')-> paginate(12);
         $links = str_replace('/?', '?', $articles->render());
 
         $categories = Category::all()-> sortBy('title');
@@ -69,13 +69,13 @@ class ArticlesController extends Controller
             $request->file('preview')->move($img_root, $fileName);
 
             $img = Image::make('images/articles/'. $fileName);
-            $img->resize(800,400);
+            $img->resize(1440, 900);
             $img->save('images/articles/'. $fileName);
 
             $all = $request->all();
             $all['preview'] = "/images/articles/" . $fileName;
             if ($all['meta_keywords']=='') {
-                $all['meta_keywords']= '1234567';
+                $all['meta_keywords']= 'Ньюфауленд';
             }
 
 

@@ -11,5 +11,8 @@ class Group extends Model
         'title' => 'обычная'
     );
     
-    
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
+    }
 }

@@ -98,7 +98,7 @@
             <span class="border-right">
 
             <ul class="nav line">
-                <li><a href="{{action('ArticlesController@index')}}"><span style="font-size: 19px; color: #2b669a;"><i class="fa fa-newspaper-o" aria-hidden="true"> Статья </i></a></li>
+                <li><a href="{{action('ArticlesController@index')}}"><span style="font-size: 19px; color: #2b669a;"><i class="fa fa-newspaper-o" aria-hidden="true"> Статья </i></span></a></li>
                 <li><a href="{{action('CategoriesController@index')}}"><span style="font-size: 19px; color: #2b669a;"><i class="fa fa-folder-open"  aria-hidden="true"> Категория </i></span></a></li>
                 <li><a href="{{action('GroupsController@index')}}"><span style="font-size: 19px; color: #2b669a;"><i class="fa fa-object-group"  aria-hidden="true"> Группа </i></span></a></li>
                 <li><a href="#">Наши филиалы</a></li>

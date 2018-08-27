@@ -45,6 +45,8 @@
                     <th>id</th>
                     <th class="td-1">Картинка</th>
                     <th>Название</th>
+                    <th>Категория</th>
+                    <th>Группа</th>
                     <th class="td-1">Изменён</th>
                     <th>Действие</th>
 
@@ -79,6 +81,8 @@
                         @endif
 
                         <td class="td-2">{{$article->title}}</td>
+                        <td class="td-1">{{$article->category->title}}</td>
+                        <td class="td-2">{{$article->group->title}}</td>
 
                         <td class="td-1" style="width: 8em;">{{$article->updated_at->format('d-m-Y')}}</td>
                         <td>
