@@ -20,47 +20,43 @@
                 </div>
 
             </div>
-            <div class="blog-content-right">
+            <div class="col-md-3 bann-left">
+                <!-- Поиск -->
                 <div class="b-search">
                     <form>
-                        <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+                        <input type="text" value="Search" onfocus="this.value = '';"
+                               onblur="if (this.value == '') {this.value = 'Search';}">
                         <input type="submit" value="">
                     </form>
                 </div>
 
-                <h3>Recent Posts</h3>
+                <h3>Предыдущие статьи</h3>
                 <div class="blo-top">
-                    <div class="blog-grids">
-                        <div class="blog-grid-left">
-                            <a href="single.html"><img src="{{asset('images/site/1b.jpg')}}" class="img-responsive" alt=""></a>
-                        </div>
-                        <div class="blog-grid-right">
-                            <h4><a href="single.html">Little Invaders </a></h4>
-                            <p>pellentesque dui, non felis. Maecenas male </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="blog-grids">
-                        <div class="blog-grid-left">
-                            <a href="single.html"><img src="{{asset('images/site/2b.jpg')}}" class="img-responsive" alt=""></a>
-                        </div>
-                        <div class="blog-grid-right">
-                            <h4><a href="single.html">Little Invaders </a></h4>
-                            <p>pellentesque dui, non felis. Maecenas male </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="blog-grids">
-                        <div class="blog-grid-left">
-                            <a href=""><img src="{{asset('images/site/3b.jpg')}}" class="img-responsive" alt=""></a>
-                        </div>
-                        <div class="blog-grid-right">
-                            <h4><a href="single.html">Little Invaders </a></h4>
-                            <p>pellentesque dui, non felis. Maecenas male </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
+                    @php($loop=0)
+                    @foreach($posts as $article)
+                        @if ($loop >3)
+                            <div class="blog-grids">
+
+                                <div class="blog-grid-right">
+                                    <h4><i><a href="{{action('FrontController@show',$article->id)}}">{{$article ->title}}</a></i></h4>
+                                    @php
+                                        $string = $article -> content;
+                                        $string = strip_tags($string);
+                                        $string = substr($string, 0, 60);
+                                        $string = substr($string, 0, strrpos($string, ' '));
+                                        $string =  $string."… ";
+                                    @endphp
+
+                                    {{$string}}
+
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        @endif
+                        @php($loop++)
+                    @endforeach
                 </div>
+
                 <h3>Categories</h3>
                 <div class="blo-top">
                     <li><a href="#">|| Lorem Ipsum passage</a></li>
@@ -85,7 +81,6 @@
                     </div>
                     <div class="clearfix"></div>
                 </div>
-
             </div>
             <div class="clearfix"> </div>
         </div>

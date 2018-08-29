@@ -56,12 +56,11 @@
             <span class="menu"> </span>
             <ul class="cl-effect-1">
                 <li class="active"><a href="{{asset('/')}}">Home</a></li>
-                <li><a href="{{asset('/about')}}">About Us</a></li>
-                <li><a href="{{asset('/gallery')}}">Gallery</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="404.html">Shortcodes</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="{{asset('/about')}}">О нас</a></li>
+                <li><a href="{{asset('/gallery')}}">Галлерея</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="404.html">Щенки</a></li>
+                <li><a href="{{asset('/contact')}}">Контакты</a></li>
                 <div class="clearfix"></div>
             </ul>
         </div>

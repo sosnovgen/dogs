@@ -42,9 +42,10 @@ class FrontController extends Controller
     {
         
         /*$comments=Article::where('public','=',1)->find($id)->comments()->where('public','=','1')->get();; // выбираем все комментарии, который относятся к статье*/
-        $categories = Category::all();
+        $group = Group::where('title', 'блог')->first();
+        $posts=Article::where('group_id',$group->id) -> orderBy('id', 'desc')-> get();
         $articles=Article::find($id);
-        return view('site.show',['articles'=>$articles], ['categories' => $categories]);
+        return view('site.show',['articles'=>$articles], ['posts' => $posts]);
     }
 
     //-----------------------------------------------
@@ -67,6 +68,15 @@ class FrontController extends Controller
         //$arts[] = $articles ->toarray();
         // return view('site.test',['arts'=>$arts]);
         return view('site.gallery', ['articles' => $articles]);
+    }
+
+    //-------------------------------------------------------------------
+    //Контакты
+    public function contact()
+    {
+
+        return view('site.contact');
+
     }
 
     //Сортировка по категории
