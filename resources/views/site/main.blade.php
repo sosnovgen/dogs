@@ -59,7 +59,7 @@
                 <li><a href="{{asset('/about')}}">О нас</a></li>
                 <li><a href="{{asset('/gallery')}}">Галлерея</a></li>
                 <li><a href="blog.html">Блог</a></li>
-                <li><a href="404.html">Щенки</a></li>
+                <li><a href="{{asset('/puppies')}}">Щенки</a></li>
                 <li><a href="{{asset('/contact')}}">Контакты</a></li>
                 <div class="clearfix"></div>
             </ul>

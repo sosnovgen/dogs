@@ -589,7 +589,7 @@ ul.span_2 li.span_2-left{
 ul.span_2 li.span_2-right{
 	width:60%;
 	float:left;
-	padding: 1em 0;
+	padding: 0em 0;
 }
 ul.span_2 li.span_2-right h3 {
   color: #26313b;

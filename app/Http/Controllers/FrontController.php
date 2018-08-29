@@ -71,6 +71,20 @@ class FrontController extends Controller
     }
 
     //-------------------------------------------------------------------
+    //Щенки
+    public function puppies()
+    {
+        $group = Group::where('title', 'щенки')->first();
+        $articles=Article::where('group_id',$group->id) -> orderBy('id', 'desc')-> get();
+        //$arts[] = $articles ->toarray();
+        // return view('site.test',['arts'=>$arts]);
+        return view('site.puppies', ['articles' => $articles]);
+
+
+
+    }
+
+    //-------------------------------------------------------------------
     //Контакты
     public function contact()
     {

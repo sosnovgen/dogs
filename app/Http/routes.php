@@ -23,6 +23,7 @@ Route::get('/about', function() { return view('site.about'); });
 Route::get('/show/{id}','FrontController@show');
 Route::get('/gallery','FrontController@gallery');
 Route::get('/contact','FrontController@contact');
+Route::get('/puppies','FrontController@puppies');
 
 
 
