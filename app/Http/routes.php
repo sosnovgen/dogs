@@ -24,7 +24,7 @@ Route::get('/show/{id}','FrontController@show');
 Route::get('/gallery','FrontController@gallery');
 Route::get('/contact','FrontController@contact');
 Route::get('/puppies','FrontController@puppies');
-
+Route::get('/video','FrontController@video');
 
 
 //---------------------- Авторизация -------------------------

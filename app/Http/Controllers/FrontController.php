@@ -15,6 +15,7 @@ use Redirect;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Mail;
+use Embed;
 
 class FrontController extends Controller
 
@@ -80,7 +81,17 @@ class FrontController extends Controller
         // return view('site.test',['arts'=>$arts]);
         return view('site.puppies', ['articles' => $articles]);
 
+    }
 
+    //-------------------------------------------------------------------
+    //Видео
+    public function video()
+    {
+        $group = Group::where('title', 'видео')->first();
+        $articles=Article::where('group_id',$group->id) -> orderBy('id', 'desc')-> get();
+        //$arts[] = $articles ->toarray();
+        // return view('site.test',['arts'=>$arts]);
+        return view('site.video', ['articles' => $articles]);
 
     }
 
