@@ -18,13 +18,13 @@ class ArticlesController extends Controller
         $articles = Article::orderBy('id','desc')-> paginate(12);
         $links = str_replace('/?', '?', $articles->render());
 
-        $categories = Category::all()-> sortBy('title');
+        $groups = Group::all()-> sortBy('title');
         $sort = 0; //сортировка по категории отключена
 
         return view('admin.articles.view',
             [
                 'articles' => $articles,
-                'categories' => $categories,
+                'groups' => $groups,
                 'sort' => $sort,
                 'links' => $links,
             ]);
@@ -32,7 +32,7 @@ class ArticlesController extends Controller
 
     public function indexid($id)
     {
-        $articles = Article::where('category_id','=',$id) -> orderBy('title') -> paginate(8);
+        $articles = Article::where('group_id','=',$id) -> orderBy('title') -> paginate(8);
         $links = str_replace('/?', '?', $articles->render());
         $categories = Category::all()-> sortBy('title');;
         $groups = Group::all();
@@ -41,7 +41,7 @@ class ArticlesController extends Controller
         return view('admin.articles.view',
             [
                 'articles' => $articles,
-                'categories' => $categories,
+                'groups' => $groups,
                 'sort' => $sort,
                 'links' => $links,
             ]);

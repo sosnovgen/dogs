@@ -91,23 +91,23 @@
 
 <div class="footer">
     <div class="col-md-3 foot-1">
-        <h4>Quick Links</h4>
+        <h4>Ссылки</h4>
         <ul>
-            <li><a href="#">||   Lorem Ipsum passage</a></li>
-            <li><a href="#">||   Finibus Bonorum et</a></li>
-            <li><a href="#">||   Treatise on the theory</a></li>
+            <li><a href="https://newfs.info/magazin/">||   Журнал Наш Ньюфауленд</a></li>
+            <li><a href="https://newfs.info/exhibition/">||   Выставки</a></li>
+            <li><a href="https://newfs.info/forum/">||   Форумы</a></li>
         </ul>
     </div>
     <div class="col-md-3 foot-1">
-        <h4>Favorite Resources</h4>
+        <h4>Полезные ресурсы</h4>
         <ul>
-            <li><a href="#">||   Characteristic words</a></li>
-            <li><a href="#">||   combined with a handful</a></li>
-            <li><a href="#">||   which looks reasonable</a></li>
+            <li><a href="http://doggi.ru/publ/1/v_dome_pojavilsja_shhenok/1/34-1-0-1024">||   Выбор щенка</a></li>
+            <li><a href="http://doggi.ru/publ/1/v_dome_pojavilsja_shhenok/34">||   Первые дни дома</a></li>
+            <li><a href="http://doggi.ru/publ/1/43">||   Выставки собак</a></li>
         </ul>
     </div>
     <div class="col-md-3 foot-1">
-        <h4>About Us</h4>
+        <h4>О нас</h4>
         <ul>
             <li><a href="#">||  Even slightly believable</a></li>
             <li><a href="#">||  Hidden in the middle</a></li>

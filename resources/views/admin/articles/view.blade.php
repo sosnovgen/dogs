@@ -13,19 +13,19 @@
             <div class="col-md-3">
                 <div class="cat-select-over">
                 <div class="cat-select">
-                <label for="category_id">Выбрать категорию</label>
-                <select onchange="window.location.href=this.options[this.selectedIndex].value" name="category_id" class="form-control" id="select_cat" onfocus='this.size=12;' onchange='this.size=1;' onblur='this.size=1;'>
+                <label for="group_id">Выбрать группу</label>
+                <select onchange="window.location.href=this.options[this.selectedIndex].value" name="group_id" class="form-control" id="select_cat" onfocus='this.size=12;' onchange='this.size=1;' onblur='this.size=1;'>
                     <option value="{{action('ArticlesController@index')}}" >Все</option>
 
-                    @foreach($categories as $category)
+                    @foreach($groups as $group)
 
-                        <option value="{{action('ArticlesController@indexid',['id'=>$category->id])}}"
+                        <option value="{{action('ArticlesController@indexid',['id'=>$group->id])}}"
                                 @if(($articles->count() >0)&&($sort == 1))
-                                    @if   ($articles ->first()->category->title == $category->title)
+                                    @if   ($articles ->first()->group->title == $group->title)
                                         selected
                                     @endif
                                 @endif
-                        >{{$category->title}}</option>
+                        >{{$group->title}}</option>
 
                     @endforeach
                     @if(!($articles->count() >0))
