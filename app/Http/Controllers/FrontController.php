@@ -65,10 +65,14 @@ class FrontController extends Controller
     public function gallery()
     {
         $group = Group::where('title', 'фото')->first();
-        $articles=Article::where('group_id',$group->id) -> orderBy('id', 'desc')-> get();
+        $articles=Article::where('group_id',$group->id) -> orderBy('id', 'desc')-> paginate(12);
+        $links = str_replace('/?', '?', $articles->render());
         //$arts[] = $articles ->toarray();
         // return view('site.test',['arts'=>$arts]);
-        return view('site.gallery', ['articles' => $articles]);
+        return view('site.gallery', [
+            'articles' => $articles,
+            'links' => $links,
+            ]);
     }
 
     //-------------------------------------------------------------------
@@ -76,10 +80,14 @@ class FrontController extends Controller
     public function puppies()
     {
         $group = Group::where('title', 'щенки')->first();
-        $articles=Article::where('group_id',$group->id) -> orderBy('id', 'desc')-> get();
+        $articles=Article::where('group_id',$group->id) -> orderBy('id', 'desc')-> paginate(12);
+        $links = str_replace('/?', '?', $articles->render());
         //$arts[] = $articles ->toarray();
         // return view('site.test',['arts'=>$arts]);
-        return view('site.puppies', ['articles' => $articles]);
+        return view('site.puppies', [
+            'articles' => $articles,
+            'links' => $links,
+        ]);
 
     }
 
@@ -88,10 +96,30 @@ class FrontController extends Controller
     public function video()
     {
         $group = Group::where('title', 'видео')->first();
-        $articles=Article::where('group_id',$group->id) -> orderBy('id', 'desc')-> get();
+        $articles=Article::where('group_id',$group->id) -> orderBy('id', 'desc')-> paginate(12);
+        $links = str_replace('/?', '?', $articles->render());
         //$arts[] = $articles ->toarray();
         // return view('site.test',['arts'=>$arts]);
-        return view('site.video', ['articles' => $articles]);
+        return view('site.video', [
+            'articles' => $articles,
+            'links' => $links,
+        ]);
+
+    }
+
+    //-------------------------------------------------------------------
+    //Видео
+    public function ccb()
+    {
+        $group = Group::where('title', 'ссв')->first();
+        $articles=Article::where('group_id',$group->id) -> orderBy('id', 'desc')-> paginate(12);
+        $links = str_replace('/?', '?', $articles->render());
+        //$arts[] = $articles ->toarray();
+        // return view('site.test',['arts'=>$arts]);
+        return view('site.ccb', [
+            'articles' => $articles,
+            'links' => $links,
+        ]);
 
     }
 

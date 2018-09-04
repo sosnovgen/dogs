@@ -387,6 +387,11 @@ ul.callbacks_tabs.callbacks1_tabs {
   text-decoration: none;
   font-family: 'Libre Baskerville', serif;
 }
+
+.my-cap{
+	font-weight: 700;
+	font-family: 'Libre Baskerville', serif;
+}
 .blog-grid-right h4 a:hover{
   color: #f53f1a;
 }

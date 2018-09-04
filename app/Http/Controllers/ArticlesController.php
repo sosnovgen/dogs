@@ -32,7 +32,7 @@ class ArticlesController extends Controller
 
     public function indexid($id)
     {
-        $articles = Article::where('group_id','=',$id) -> orderBy('title') -> paginate(8);
+        $articles = Article::where('group_id','=',$id) ->orderBy('id','desc')-> paginate(12);
         $links = str_replace('/?', '?', $articles->render());
         $categories = Category::all()-> sortBy('title');;
         $groups = Group::all();

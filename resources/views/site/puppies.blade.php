@@ -4,7 +4,9 @@
     <div class="about">
 
         <div class="team_grid">
-            <h3 class="m_1">Радость-родились щенки</h3>
+            <br>
+            <h3 class="text-center ">Радость-родились щенки</h3>
+            <br>
             @foreach($articles as $article)
                 <div class="col-md-6 ab-top">
                     <ul class="span_2">
@@ -35,6 +37,13 @@
             </div>
         </div>
     </div>
+
+    <br>
+    {{--begin of pagination--}}
+    <div style="width: 50%; margin: 0 auto; text-align: center"> {!! $links !!} </div>
+    {{--end of pagination--}}
+
+    <br>
 
     <script type="text/javascript" src="{{asset('js/lightbox.js')}}"></script>
 

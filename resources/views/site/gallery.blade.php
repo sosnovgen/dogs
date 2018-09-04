@@ -2,7 +2,8 @@
 @section('content')
 
     <br>
-    <div class="container">
+    <h3 class="text-center text-capitalize">Наши собаки</h3>
+    <br>
         @foreach($articles as $article)
             <div class="col-xs-6 col-sm-3">
                 <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
@@ -12,7 +13,6 @@
             </div>
         @endforeach
 
-    </div>
 
     <div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -24,6 +24,13 @@
             </div>
         </div>
     </div>
+
+    <br>
+    {{--begin of pagination--}}
+    <div style="width: 50%; margin: 0 auto; text-align: center"> {!! $links !!} </div>
+    {{--end of pagination--}}
+
+    <br>
 
     <script type="text/javascript" src="{{asset('js/lightbox.js')}}"></script>
 

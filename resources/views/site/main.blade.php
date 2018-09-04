@@ -58,7 +58,7 @@
                 <li class="active"><a href="{{asset('/')}}">Home</a></li>
                 <li><a href="{{asset('/about')}}">О нас</a></li>
                 <li><a href="{{asset('/gallery')}}">Галлерея</a></li>
-                <li><a href="blog.html">Блог</a></li>
+                <li><a href="{{asset('/ccb')}}">ССВ</a></li>
                 <li><a href="{{asset('/puppies')}}">Щенки</a></li>
                 <li><a href="{{asset('/video')}}">Видео</a></li>
                 <li><a href="{{asset('/contact')}}">Контакты</a></li>
@@ -115,11 +115,11 @@
         </ul>
     </div>
     <div class="col-md-3 foot-1">
-        <h4>Custom Menu</h4>
+        <h4>Контакты</h4>
         <ul>
-            <li><a href="#">||  Internet tend to repeat</a></li>
-            <li><a href="#">||  Alteration in some form</a></li>
-            <li><a href="#">||  This book is a treatise</a></li>
+            <li><a href="#">||  email: malleka@mail.ru</a></li>
+            <li><a href="#">||  phone: +7(916) 089-20-45</a></li>
+            <li><a href="#">||  Малыхина Оля, Россия, Москва</a></li>
         </ul>
     </div>
 
