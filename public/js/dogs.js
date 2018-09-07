@@ -60,7 +60,7 @@ $(document).ready(function () {
     })
 
 
-    //-------- Удаление товара ---------------
+    //-------- Удаление статьи ---------------
     $('td > .article_link').click(function (event) {
         event.preventDefault();
 
@@ -69,7 +69,7 @@ $(document).ready(function () {
         var _parent = $(this).parent().parent();
         var token = $('#token-keeper2').data("token"); //Строка таблицы <TR>
 
-        confirm_var = confirm('Удалить товар?'); //запрашиваем подтверждение на удаление
+        confirm_var = confirm('Удалить статью?'); //запрашиваем подтверждение на удаление
         if (!confirm_var) {
             return false;
         }

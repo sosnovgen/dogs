@@ -3,87 +3,69 @@
 
 
     <div class="about">
-    <h2>About</h2>
-    <div class="about-top">
-        <div class="col-md-6 ab-top">
-            <img src="{{asset('images/site/4.jpg')}}" class="img-responsive" alt="">
-        </div>
-        <div class="col-md-6 ab-top">
-            <h3>Lorem Ipsum has been the industry's</h3>
-            <p>Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. of Lorem Ipsum. PageMaker including versions of Lorem Ipsum.</p>
-            <p>Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions Letraset sheets containing Lorem Ipsum passages, and more recently with including versions of Lorem Ipsum.</p>
-        </div>
-        <div class="clearfix"> </div>
-    </div>
-    <div class="team_grid">
-        <h3 class="m_1">Meet Our Team</h3>
-        <div class="span_3">
-            <div class="col-md-6 ab-top">
-                <ul class="span_2">
-                    <li class="span_2-left"><img src="{{asset('images/site/4.jpg')}}" class="img-responsive" alt=""></li>
-                    <li class="span_2-right">
-                        <h3>Gummies lollipop</h3>
+        <h3 class="m_1" style="font-weight: 800">О нас</h3>
+        <br>
+        <!-- Переменная цикла -->
+        @php ($loop = 1)
+        @foreach($articles as $article)
+            @if ($loop == 1)
+                <div class="about-top">
+                    <div class="col-md-6 ab-top">
+                        <a href="{{action('FrontController@show',$article->id)}}"><img
+                                    src="{{asset($article->preview)}}" class="img-responsive" alt=""></a>
+                    </div>
+                    <div class="col-md-6">
+                        <h4><a style="color:#3c3c3c; font-weight: 600"
+                               href="{{action('FrontController@show',$article->id)}}">{{$article ->title}}</a></h4>
 
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
-                    </li>
-                    <div class="clearfix"> </div>
-                </ul>
-            </div>
-            <div class="col-md-6 ab-top">
-                <ul class="span_2">
-                    <li class="span_2-left"><img src="{{asset('images/site/5.jpg')}}" class="img-responsive" alt=""></li>
-                    <li class="span_2-right">
-                        <h3>Gummies lollipop</h3>
+                        @php
+                            $string = $article -> content;
+                            $string = strip_tags($string);
+                            $string = substr($string, 0, 800);
+                            $string = substr($string, 0, strrpos($string, ' '));
+                            $string =  $string."… ";
+                        @endphp
 
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
-                    </li>
-                    <div class="clearfix"> </div>
-                </ul>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
-        <div class="span_4">
-            <div class="col-md-6 ab-top">
-                <ul class="span_2">
-                    <li class="span_2-left"><img src="{{asset('images/site/1.jpg')}}" class="img-responsive" alt=""></li>
-                    <li class="span_2-right">
-                        <h3>Gummies lollipop</h3>
+                        {{ $string }}
 
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
+                    </div>
+                    <div class="clearfix"></div>
 
-                    </li>
-                    <div class="clearfix"> </div>
-                </ul>
-            </div>
-            <div class="col-md-6 ab-top">
-                <ul class="span_2">
-                    <li class="span_2-left"><img src="{{asset('images/site/4.jpg')}}" class="img-responsive" alt=""></li>
-                    <li class="span_2-right">
-                        <h3>Gummies lollipop</h3>
+                </div>
+            @else
 
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
+                <div class="col-md-6 ab-top">
+                    <ul class="span_2">
 
-                    </li>
-                    <div class="clearfix"> </div>
-                </ul>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
-    </div>
-    <div class="testimonial">
+                        <li class="span_2-left"><a href="{{action('FrontController@show',$article->id)}}" class="thumbnail">
+                                <img src="{{asset($article->preview)}}" class="img-responsive" alt=""></a></li>
+                        <li class="span_2-right">
+                            <h4><a style="color:#3c3c3c; font-weight: 600; font-size: medium"
+                                   href="{{action('FrontController@show',$article->id)}}">{{$article ->title}}</a></h4>
 
-        <h3>Our Testimonials</h3>
-        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum</p>
-        <ul class="test_icon">
-            <li><a href="#"><img src="{{asset('images/site/1.jpg')}}" class="img-responsive"></a></li>
-            <li><a href="#"><img src="{{asset('images/site/2.jpg')}}" class="img-responsive"></a></li>
-            <li><a href="#"><img src="{{asset('images/site/3.jpg')}}" class="img-responsive"></a></li>
-            <li><a href="#"><img src="{{asset('images/site/4.jpg')}}" class="img-responsive"></a></li>
-            <li><a href="#"><img src="{{asset('images/site/5.jpg')}}" class="img-responsive"></a></li>
-            <div class="clearfix"> </div>
-        </ul>
+                            @php
+                                $string = $article -> content;
+                                $string = strip_tags($string);
+                                $string = substr($string, 0, 200);
+                                $string = substr($string, 0, strrpos($string, ' '));
+                                $string =  $string."… ";
+                            @endphp
 
-    </div>
-</div>
+                            {{ $string }}
+                        </li>
+                        <div class="clearfix"></div>
+                    </ul>
+                </div>
+            @endif
 
+            @php ($loop++)
+        @endforeach
+        <div class="clearfix"></div>
+
+        <br>
+        {{--begin of pagination--}}
+        <div style="width: 50%; margin: 0 auto; text-align: center"> {!! $links !!} </div>
+        {{--end of pagination--}}
+
+        <br>
 @stop

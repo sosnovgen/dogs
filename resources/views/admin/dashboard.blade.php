@@ -1,14 +1,20 @@
 @extends('admin.main')
 @section('content')
-    Felis suscipit. Congue. Facilisis. Cras sit dui, suscipit hac malesuada pulvinar hendrerit pede praesent tellus dignissim eu tempor dis consectetuer phasellus penatibus ultrices aenean laoreet. Platea leo amet turpis. Netus.
+    <p>Это админпанель. Здесь Вы можете добавлять, редактировать или удалить содержимое страниц. <br> В разделе "Текст/Фото" можно редактировать всё.
+    На работу сайта это не повлияет.<br>  Раздел "Группа" редактировать и удалять содержимое не рекомендуется, т.к. имя группы является ключом к сортировки и
+    отображению страниц. Если есть необходимость изменить или удалить какую-то группу, нужно предварительно удалить все записи,
+    использующие её (в разделе "Текст/Фото").<br>  Раздел "Категория" не используется, он оставлен в резерве (если сайт будет развиваться.)
+    </p>
+<p>
+    При редактировании и добавления материала нп страницу сайта нужно руководствовать следующим правилом:
+<br>Статья с группой "блог" - добавит материал на стартовую страницу,
+    <br>Статья с группой "видео" - добавит материал на страницу "Наше видео",
+    <br>Статья с группой "фото" - добавит материал на страницу "Фото" Наши собаки,
+    <br>Статья с группой "ССВ" - добавит материал на страницу "ССВ" спасение на воде,
+    <br>Статья с группой "о нас" - добавит материал на страницу "О нас",
+    <br>Статья с группой "щенки" - добавит материал на страницу "Щенки",
 
-    Semper Vehicula. Dui. Euismod. Magnis vestibulum vel dolor dui porta. Rhoncus iaculis lacinia faucibus mauris, per netus conubia taciti, vehicula litora laoreet litora. Ut purus.
-
-    Potenti diam non cubilia convallis sed scelerisque sociis nascetur. Lectus vivamus molestie est maecenas auctor viverra enim iaculis tincidunt vitae hendrerit. Purus duis sodales malesuada natoque. Adipiscing non. Sodales fames ultrices tempor habitant et odio venenatis aliquet semper suspendisse mi venenatis, parturient ultricies pulvinar praesent.
-
-
-
-
+</p>
 
 
 @stop

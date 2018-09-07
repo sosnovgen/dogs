@@ -108,7 +108,7 @@ class FrontController extends Controller
     }
 
     //-------------------------------------------------------------------
-    //Видео
+    //Служба спасения на воде
     public function ccb()
     {
         $group = Group::where('title', 'ссв')->first();
@@ -117,6 +117,22 @@ class FrontController extends Controller
         //$arts[] = $articles ->toarray();
         // return view('site.test',['arts'=>$arts]);
         return view('site.ccb', [
+            'articles' => $articles,
+            'links' => $links,
+        ]);
+
+    }
+
+    //-------------------------------------------------------------------
+    //О нас
+    public function about()
+    {
+        $group = Group::where('title', 'о нас')->first();
+        $articles=Article::where('group_id',$group->id) -> orderBy('id')-> paginate(12);
+        $links = str_replace('/?', '?', $articles->render());
+        //$arts[] = $articles ->toarray();
+        // return view('site.test',['arts'=>$arts]);
+        return view('site.about', [
             'articles' => $articles,
             'links' => $links,
         ]);

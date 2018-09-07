@@ -4,7 +4,7 @@
     <div class="about">
 
         <div class="team_grid">
-            <br>
+
             <h3 class="text-center ">Радость-родились щенки</h3>
             <br>
             @foreach($articles as $article)
@@ -14,7 +14,7 @@
                         <li class="span_2-left"><a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
                                 <img src="{{asset($article->preview)}}" class="img-responsive" alt=""></a></li>
                         <li class="span_2-right">
-                            <h3>{{$article->title}}</h3>
+                            <h4 style="color:#3c3c3c; font-weight: 600; font-size: medium">{{$article->title}}</h4>
                             @php($text=strip_tags($article->content))
                             {{$text}}
                         </li>
