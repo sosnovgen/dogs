@@ -7,8 +7,7 @@
         @foreach($articles as $article)
             <div class="col-xs-6 col-sm-3">
                 <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
-                    <img src="{{asset($article->preview)}}"
-                         alt="...">
+                    <img src="{{asset($article->preview)}}" title="{{$article->title}}" alt="...">
                 </a>
             </div>
         @endforeach
