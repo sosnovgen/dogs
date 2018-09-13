@@ -26,6 +26,7 @@ Route::get('/contact','FrontController@contact');
 Route::get('/puppies','FrontController@puppies');
 Route::get('/video','FrontController@video');
 Route::get('/ccb','FrontController@ccb');
+Route::get('/diplom','FrontController@diplom');
 
 //---------------------- Авторизация -------------------------
 Route::auth();

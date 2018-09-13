@@ -148,24 +148,19 @@ class FrontController extends Controller
 
     }
 
-    //Сортировка по категории
-    public function news()
+    //-------------------------------------------------------------------
+    //Дипломы.
+    public function diplom()
     {
-        $categories = Category::all(); //Все категории
-        $group = Group::where('title','=','новинка');
-        $id  = $group->first()-> id;
-
-        $articles = Article::where('group_id','=',$id) -> paginate(12); //Выбрать все новинки*/
+        $group = Group::where('title', 'дипломы')->first();
+        $articles=Article::where('group_id',$group->id) -> orderBy('id', 'desc')-> paginate(12);
         $links = str_replace('/?', '?', $articles->render());
-        $n = 0; //Признак сортировки по категориям
-
-        return view('site.page',[
-            'categories' => $categories,
+        //$arts[] = $articles ->toarray();
+        // return view('site.test',['arts'=>$arts]);
+        return view('site.diplom', [
             'articles' => $articles,
-            'n' => $n,
             'links' => $links,
         ]);
-
     }
     //-------------------------------------------------------
     //Find in articles.

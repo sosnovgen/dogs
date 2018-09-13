@@ -69,7 +69,20 @@ class ArticlesController extends Controller
             $request->file('preview')->move($img_root, $fileName);
 
             $img = Image::make('images/articles/'. $fileName);
-            $img->resize(1440, 900);
+
+            $id = $request->input('group_id'); //Ищем группу "Дипломы"
+            $group = Group::find($id)->title;  //Выбираем имя группы.
+
+            /*return view('admin.test',
+                [
+                    'id' => $id,
+                    'group' => $group,
+                ]);*/
+
+            if ($group=='дипломы')
+                    {$img->resize(900, 1440);}
+                else  {{$img->resize(1440, 900);}}
+
             $img->save('images/articles/'. $fileName);
 
             $all = $request->all();
@@ -129,7 +142,20 @@ class ArticlesController extends Controller
             $request->file('preview')->move($img_root, $fileName);
 
             $img = Image::make('images/articles/' . $fileName);
-            $img->resize(1440, 900);
+
+            $id = $request->input('group_id'); //Ищем группу "Дипломы"
+            $group = Group::find($id)->title;  //Выбираем имя группы.
+
+            /*return view('admin.test',
+                [
+                    'id' => $id,
+                    'group' => $group,
+                ]);*/
+
+            if ($group=='дипломы')
+            {$img->resize(900, 1440);}
+            else  {{$img->resize(1440, 900);}}
+
             $img->save('images/articles/' . $fileName);
 
             $all = $request->all();

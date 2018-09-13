@@ -61,6 +61,7 @@
                 <li><a href="{{asset('/ccb')}}">ССВ</a></li>
                 <li><a href="{{asset('/puppies')}}">Щенки</a></li>
                 <li><a href="{{asset('/video')}}">Видео</a></li>
+                <li><a href="{{asset('/diplom')}}">Дипломы</a></li>
                 <li><a href="{{asset('/contact')}}">Контакты</a></li>
                 <div class="clearfix"></div>
             </ul>
