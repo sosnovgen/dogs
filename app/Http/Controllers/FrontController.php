@@ -166,19 +166,18 @@ class FrontController extends Controller
     //Find in articles.
     public function search(Request $request)
     {
-        $categories = Category::all();
         $query = $request -> search;
-        $articles = Article::where('title', 'LIKE', '%' . $query . '%')->paginate(12);
+        $group_id = Group::where('title', 'блог')->first()->id;
+        $articles = Article::where('content', 'LIKE', '%' . $query . '%')
+            ->where('group_id',$group_id)
+            ->paginate(12);
         $links = str_replace('/?', '?', $articles->render());
-        $n = 0; //Признак сортировки
 
         /*return view('site.page', copmpact('categories','query','articles','links', 'n'));*/
-        return view('site.page',[
-            'categories' => $categories,
+        return view('site.search',[
             'articles' => $articles,
-            'n' => $n,
-            'links' => $links,
             'query' => $query,
+            'links' => $links,
         ]);
     }
 

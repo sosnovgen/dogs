@@ -113,15 +113,16 @@
 
 
     <div class="col-md-3 bann-left">
+
+
         <!-- Поиск -->
         <div class="b-search">
-            <form>
-                <input type="text" value="Search" onfocus="this.value = '';"
+            <form role="form" method="GET" action="{{action('FrontController@search')}}" enctype="multipart/form-data">
+                <input type="text" name="search" value="Search" onfocus="this.value = '';"
                        onblur="if (this.value == '') {this.value = 'Search';}">
                 <input type="submit" value="">
             </form>
         </div>
-
 
         <h3>Предыдущие статьи</h3>
         <div class="blo-top">
