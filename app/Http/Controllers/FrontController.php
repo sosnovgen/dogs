@@ -168,8 +168,11 @@ class FrontController extends Controller
     {
         $query = $request -> search;
         $group_id = Group::where('title', 'блог')->first()->id;
+        $group_id2 = Group::where('title', 'щенки')->first()->id;
+
         $articles = Article::where('content', 'LIKE', '%' . $query . '%')
-            ->where('group_id',$group_id)
+            /*->where('group_id',$group_id)*/
+            ->whereIn('group_id', [$group_id,$group_id2])
             ->paginate(12);
         $links = str_replace('/?', '?', $articles->render());
 

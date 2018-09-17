@@ -11,11 +11,21 @@
 
                 <div class="artical-links">
                     <ul>
-                        <li><small> </small><span>june 14, 2013</span></li>
-                        <li><a href="#"><small class="admin"> </small><span>admin</span></a></li>
-                        <li><a href="#"><small class="no"> </small><span>No comments</span></a></li>
-                        <li><a href="#"><small class="posts"> </small><span>View posts</span></a></li>
-                        <li><a href="#"><small class="link"> </small><span>permalink</span></a></li>
+                        <li>
+                            <small></small>
+                            <span>june 14, 2013</span></li>
+                        <li><a href="#">
+                                <small class="admin"></small>
+                                <span>admin</span></a></li>
+                        <li><a href="#">
+                                <small class="no"></small>
+                                <span>No comments</span></a></li>
+                        <li><a href="#">
+                                <small class="posts"></small>
+                                <span>View posts</span></a></li>
+                        <li><a href="#">
+                                <small class="link"></small>
+                                <span>permalink</span></a></li>
                     </ul>
                 </div>
 
@@ -23,8 +33,9 @@
             <div class="col-md-3 bann-left">
                 <!-- Поиск -->
                 <div class="b-search">
-                    <form>
-                        <input type="text" value="Search" onfocus="this.value = '';"
+                    <form role="form" method="GET" action="{{action('FrontController@search')}}"
+                          enctype="multipart/form-data">
+                        <input type="text" name="search" value="Search" onfocus="this.value = '';"
                                onblur="if (this.value == '') {this.value = 'Search';}">
                         <input type="submit" value="">
                     </form>
@@ -38,7 +49,9 @@
                             <div class="blog-grids">
 
                                 <div class="blog-grid-right">
-                                    <h4><i><a href="{{action('FrontController@show',$article->id)}}">{{$article ->title}}</a></i></h4>
+                                    <h4>
+                                        <i><a href="{{action('FrontController@show',$article->id)}}">{{$article ->title}}</a></i>
+                                    </h4>
                                     @php
                                         $string = $article -> content;
                                         $string = strip_tags($string);
@@ -58,7 +71,7 @@
                 </div>
 
             </div>
-            <div class="clearfix"> </div>
+            <div class="clearfix"></div>
         </div>
     </div>
 
