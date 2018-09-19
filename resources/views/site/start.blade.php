@@ -30,8 +30,9 @@
                                         Super Mishka, имеет хорошую родословную в которой собраны известные крови. </p>
                                 </div>
                             </li>
+
                             <li>
-                                <img src="{{asset('images/site/100_2587.jpg')}}" class="img-responsive" alt="">
+                                <img src="{{asset('images/site/5.jpg')}}" class="img-responsive" alt="">
                                 <div class="caption">
                                     <h3>Vivat Brave Master Super Mishka </h3>
                                     <p>Предлагется для вязки роскошный, титулованный кобель
@@ -39,17 +40,21 @@
                                 </div>
                             </li>
                             <li>
-                                <img src="{{asset('images/site/100_2561.jpg')}}" class="img-responsive" alt="">
+                                <img src="{{asset('images/site/3.jpg')}}" class="img-responsive" alt="">
                                 <div class="caption">
-                                    <h3>Чемпион породы 2017 года!!!</h3>
-                                    <p>Юный Чемпион Украины, Юный Гранд Чемпион Украины, Чемпион России, Чемпион РФСС, Чемпион РФОС, Чемпион ОАНКОО. </p>
+                                    <h3>Юный Гранд Чемпион Украины</h3>
+                                    <p>Предлагется для вязки роскошный, титулованный кобель ньюфаундленда
+                                        Vivat Brave Master Super Mishka импортирован из известного украинкого питомника
+                                        Super Mishka, имеет хорошую родословную в которой собраны известные крови. </p>
                                 </div>
                             </li>
+
                             <li>
-                                <img src="{{asset('images/site/100_2509.jpg')}}" class="img-responsive" alt="">
+                                <img src="{{asset('images/site/mers.jpg')}}" class="img-responsive" alt="">
                                 <div class="caption">
-                                    <h3>Наши тренировки и достижения</h3>
-                                    <p>Тренировки, дипломы, фото и видео галареи.</p>
+                                    <h3>Vivat Brave Master Super Mishka </h3>
+                                    <p>Предлагется для вязки роскошный, титулованный кобель
+                                        ньюфаундленда Vivat Brave Master Super Mishka импортирован из известного украинкого питомника Super Mishka, имеет хорошую родословную в которой собраны известные крови. </p>
                                 </div>
                             </li>
                         </ul>

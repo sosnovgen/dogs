@@ -110,9 +110,9 @@
     <div class="col-md-3 foot-1">
         <h4>О нас</h4>
         <ul>
-            <li><a href="#">||  Even slightly believable</a></li>
-            <li><a href="#">||  Hidden in the middle</a></li>
-            <li><a href="#">||  Ipsum therefore always</a></li>
+            <li><a href="{{asset('/about')}}">||  Кто я?</a></li>
+            <li><a href="{{asset('/contact')}}">||  Где мы?</a></li>
+            <li><a href="{{asset('/puppies')}}">||  Мои щенки</a></li>
         </ul>
     </div>
     <div class="col-md-3 foot-1">
@@ -126,7 +126,7 @@
 
     <div class="clearfix"> </div>
     <div class="copyright">
-        <p>Copyrights © 2018 Malleka All rights reserved | Template by <a href="http://w3layouts.com/">W3layouts</a></p>
+        <p>Copyrights © 2018 Malleka. All rights reserved | Template by <a href="http://w3layouts.com/">W3layouts</a></p>
     </div>
 </div>
 </div>

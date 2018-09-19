@@ -9,25 +9,7 @@
 
                 <p> {!! $articles -> content !!} </p>
 
-                <div class="artical-links">
-                    <ul>
-                        <li>
-                            <small></small>
-                            <span>june 14, 2013</span></li>
-                        <li><a href="#">
-                                <small class="admin"></small>
-                                <span>admin</span></a></li>
-                        <li><a href="#">
-                                <small class="no"></small>
-                                <span>No comments</span></a></li>
-                        <li><a href="#">
-                                <small class="posts"></small>
-                                <span>View posts</span></a></li>
-                        <li><a href="#">
-                                <small class="link"></small>
-                                <span>permalink</span></a></li>
-                    </ul>
-                </div>
+
 
             </div>
             <div class="col-md-3 bann-left">
