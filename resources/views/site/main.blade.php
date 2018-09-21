@@ -49,7 +49,7 @@
 <div class="header">
     <div class="container">
         <div class="logo">
-            <a href="index.html"><img src="{{asset('images/site/logo.png')}}" class="img-responsive" alt=""></a>
+            <a href="{{asset('/')}}"><img src="{{asset('images/site/logo.png')}}" class="img-responsive" alt=""></a>
         </div>
 
         <div class="head-nav">
