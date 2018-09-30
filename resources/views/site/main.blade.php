@@ -6,16 +6,18 @@
         <title>Мой Друг Ньюф</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-        <meta name="description" content="Собака породы Ньюфаундленд. Внешний вид и уход. Описание и характер породы Ньюфаундленд.">
-        <meta name="keywords" content= "Одна из крупнейших собак в мире и самый идеальный семейный питомец! Ньюфаундленд прекрасно ладит с детьми и другими домашними животными, он – лучший друг и лучший компаньон. Врожденно в каждого ньюфаундленда вложено стремление помогать человеку и уберегать его от беды. Сложно найти более добрую и преданную собаку, чем этот исполин с медвежьей мордочкой.">
-        <meta name="revisit" content="3 days" />
-        <meta name="revisit-after" content="3 days" />
-        <meta name="robots" content="noindex,follow" />
-    @show
+        <meta name="description"
+              content="Собака породы Ньюфаундленд. Внешний вид и уход. Описание и характер породы Ньюфаундленд.">
+        <meta name="keywords"
+              content="Одна из крупнейших собак в мире и самый идеальный семейный питомец! Ньюфаундленд прекрасно ладит с детьми и другими домашними животными, он – лучший друг и лучший компаньон. Врожденно в каждого ньюфаундленда вложено стремление помогать человеку и уберегать его от беды. Сложно найти более добрую и преданную собаку, чем этот исполин с медвежьей мордочкой.">
+        <meta name="revisit" content="3 days"/>
+        <meta name="revisit-after" content="3 days"/>
+        <meta name="robots" content="noindex,follow"/>
+@show
 
-    <!-- Font Awesome -->
+<!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset('font-awesome-4.7.0/css/font-awesome.min.css')}}">
 
     <link rel="shortcut icon" href="{{asset('images/frontsite/icon_logo_16.png')}}" type="image/png">
@@ -26,10 +28,18 @@
     <link rel="stylesheet" href="{{asset('bootstrap/css/shop-homepage.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        } </script>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet'
+          type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700' rel='stylesheet' type='text/css'>
 
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
@@ -68,8 +78,8 @@
         </div>
         <!-- script-for-nav -->
         <script>
-            $( "span.menu" ).click(function() {
-                $( ".head-nav ul" ).slideToggle(300, function() {
+            $("span.menu").click(function () {
+                $(".head-nav ul").slideToggle(300, function () {
                     // Animation complete.
                 });
             });
@@ -77,58 +87,76 @@
         <!-- script-for-nav -->
 
 
-
-        <div class="clearfix"> </div>
+        <div class="clearfix"></div>
     </div>
 </div>
 <!-- header -->
 
 
 <div class="container">
-<div id="content">
-    @yield('content')
-</div>
-
-
-<div class="footer">
-    <div class="col-md-3 foot-1">
-        <h4>Ссылки</h4>
-        <ul>
-            <li><a href="https://newfs.info/magazin/">||   Журнал Наш Ньюфауленд</a></li>
-            <li><a href="https://newfs.info/exhibition/">||   Выставки</a></li>
-            <li><a href="https://newfs.info/forum/">||   Форумы</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3 foot-1">
-        <h4>Полезные ресурсы</h4>
-        <ul>
-            <li><a href="http://doggi.ru/publ/1/v_dome_pojavilsja_shhenok/1/34-1-0-1024">||   Выбор щенка</a></li>
-            <li><a href="http://doggi.ru/publ/1/v_dome_pojavilsja_shhenok/34">||   Первые дни дома</a></li>
-            <li><a href="http://doggi.ru/publ/1/43">||   Выставки собак</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3 foot-1">
-        <h4>О нас</h4>
-        <ul>
-            <li><a href="{{asset('/about')}}">||  Кто я?</a></li>
-            <li><a href="{{asset('/contact')}}">||  Где мы?</a></li>
-            <li><a href="{{asset('/puppies')}}">||  Мои щенки</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3 foot-1">
-        <h4>Контакты</h4>
-        <ul>
-            <li><a href="#">||  email: malleka@mail.ru</a></li>
-            <li><a href="#">||  phone: +7(916) 089-20-45</a></li>
-            <li><a href="#">||  Малыхина Оля, Россия, Москва</a></li>
-        </ul>
+    <div id="content">
+        @yield('content')
     </div>
 
-    <div class="clearfix"> </div>
-    <div class="copyright">
-        <p>Copyrights © 2018 Malleka. All rights reserved | Template by <a href="http://w3layouts.com/">W3layouts</a></p>
+    <!-- banner -->
+    <div class="container">
+        <div style="padding: 26px">
+            <div class="row">
+                <div class="col-md-4">
+                    <a target="_blank" rel="nofollow" title="Pedigree® - корма для собак" href="http://prof.pedigree.ru/"><img width="280" height="280" src="{{asset('images/site/banner1.jpg')}}" class="img-responsive" alt=""></a>
+                </div>
+                <div class="col-md-4">
+                    <img width="280" height="280" src="{{asset('images/site/banner2.jpg')}}" class="img-responsive" alt="">
+                </div>
+                <div class="col-md-4">
+                    <img width="280" height="280" src="{{asset('images/site/banner3.jpg')}}" class="img-responsive" alt="">
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+
+    <!-- banner -->
+
+    <div class="footer">
+        <div class="col-md-3 foot-1">
+            <h4>Ссылки</h4>
+            <ul>
+                <li><a href="https://newfs.info/magazin/">|| Журнал Наш Ньюфауленд</a></li>
+                <li><a href="https://newfs.info/exhibition/">|| Выставки</a></li>
+                <li><a href="https://newfs.info/forum/">|| Форумы</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3 foot-1">
+            <h4>Полезные ресурсы</h4>
+            <ul>
+                <li><a href="http://doggi.ru/publ/1/v_dome_pojavilsja_shhenok/1/34-1-0-1024">|| Выбор щенка</a></li>
+                <li><a href="http://doggi.ru/publ/1/v_dome_pojavilsja_shhenok/34">|| Первые дни дома</a></li>
+                <li><a href="http://doggi.ru/publ/1/43">|| Выставки собак</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3 foot-1">
+            <h4>О нас</h4>
+            <ul>
+                <li><a href="{{asset('/about')}}">|| Кто я?</a></li>
+                <li><a href="{{asset('/contact')}}">|| Где мы?</a></li>
+                <li><a href="{{asset('/puppies')}}">|| Мои щенки</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3 foot-1">
+            <h4>Контакты</h4>
+            <ul>
+                <li><a href="#">|| email: malleka@mail.ru</a></li>
+                <li><a href="#">|| phone: +7(916) 089-20-45</a></li>
+                <li><a href="#">|| Малыхина Оля, Россия, Москва</a></li>
+            </ul>
+        </div>
+
+        <div class="clearfix"></div>
+        <div class="copyright">
+            <p>Copyrights © 2018 Malleka. All rights reserved | Template by <a
+                        href="http://w3layouts.com/">W3layouts</a></p>
+        </div>
+    </div>
 </div>
 
 </body>
