@@ -80,7 +80,7 @@ class FrontController extends Controller
     public function puppies()
     {
         $group = Group::where('title', 'щенки')->first();
-        $articles=Article::where('group_id',$group->id) -> orderBy('id', 'desc')-> paginate(12);
+        $articles=Article::where('group_id',$group->id) -> orderBy('category_id')-> paginate(12);
         $links = str_replace('/?', '?', $articles->render());
         //$arts[] = $articles ->toarray();
         // return view('site.test',['arts'=>$arts]);

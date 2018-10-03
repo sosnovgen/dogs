@@ -103,13 +103,13 @@
         <div style="padding: 26px">
             <div class="row">
                 <div class="col-md-4">
-                    <a target="_blank" rel="nofollow" title="Pedigree® - корма для собак" href="http://prof.pedigree.ru/"><img width="280" height="280" src="{{asset('images/site/banner1.jpg')}}" class="img-responsive" alt=""></a>
+                    <a target="_blank" rel="nofollow" title="Pedigree® - корма для собак" href="http://prof.pedigree.ru/"><img width="280" height="280" src="{{asset('images/site/banner1.jpg')}}" class="img-responsive img-thumbnail" alt=""></a>
                 </div>
                 <div class="col-md-4">
-                    <img width="280" height="280" src="{{asset('images/site/banner2.jpg')}}" class="img-responsive" alt="">
+                    <img width="280" height="280" src="{{asset('images/site/banner2.jpg')}}" class="img-responsive img-thumbnail" alt="">
                 </div>
                 <div class="col-md-4">
-                    <img width="280" height="280" src="{{asset('images/site/banner3.jpg')}}" class="img-responsive" alt="">
+                    <img width="280" height="280" src="{{asset('images/site/banner3.jpg')}}" class="img-responsive img-thumbnail" alt="">
                 </div>
             </div>
         </div>

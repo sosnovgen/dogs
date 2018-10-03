@@ -578,13 +578,13 @@ ul.callbacks_tabs.callbacks1_tabs {
 }
 /*-- about --*/
 .team_grid{
-	padding:2em 0;
+	padding:2em 4em;
 }
 ul.span_2 {
   padding: 1em;
   margin: 1em 0;
   list-style: none;
-  border: 1px solid #DFDFDF;
+  /*border: 1px solid #DFDFDF;*/
 }
 ul.span_2 li.span_2-left{
 	float: left;
@@ -664,7 +664,7 @@ ul.test_icon li a:hover{
 }
 .about {
   padding: 2em 1em;
-  border: 1px solid #D8DADC;
+  /*border: 1px solid #D8DADC;*/
 }
 .about-top h3 {
   color: #26313b;

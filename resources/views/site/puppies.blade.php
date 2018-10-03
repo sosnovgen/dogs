@@ -2,37 +2,76 @@
 @section('content')
 
     <div class="about">
-
         <div class="team_grid">
 
-            <h3 class="text-center ">Радость-родились щенки</h3>
-            <br>
-            @foreach($articles as $article)
-                <div class="col-md-6 ab-top">
-                    <ul class="span_2">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th><h3 style="text-align:center;">Щенки</h3></th>
+                        <th><h3 style="text-align:center;">Взрослые</h3></th>
+                    </tr>
+                    </thead>
+                    <tbody>
 
-                        <li class="span_2-left"><a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
-                                <img src="{{asset($article->preview)}}" class="img-responsive" alt=""></a></li>
-                        <li class="span_2-right">
-                            <h4 style="color:#3c3c3c; font-weight: 600; font-size: medium">{{$article->title}}</h4>
-                            @php($text=strip_tags($article->content))
-                            {{$text}}
-                        </li>
-                        <div class="clearfix"></div>
-                    </ul>
-                </div>
-            @endforeach
+                    @foreach($articles as $article)
+                        @php($num = (int) $article->category->title)
+
+                        @if (($num % 2) <> 0)
+                            <tr>
+                                <td>
+                                    <ul class="span_2">
+                                        <li class="span_2-left"><a href="#" class="thumbnail" data-toggle="modal"
+                                                                   data-target="#lightbox">
+                                                <img src="{{asset($article->preview)}}" class="img-responsive"
+                                                     alt=""></a></li>
+                                        <li class="span_2-right">
+                                            <h4 style="color:#3c3c3c; font-weight: 600; font-size: medium">{{$article->title}}</h4>
+                                            @php($text=strip_tags($article->content))
+                                            {{$text}}
+                                        </li>
+                                        <div class="clearfix"></div>
+                                    </ul>
+
+                                </td>
+                                @endif
+
+                                @if (($num % 2)== 0)
+                                    <td>
+                                        <ul class="span_2">
+                                            <li class="span_2-left"><a href="#" class="thumbnail" data-toggle="modal"
+                                                                       data-target="#lightbox">
+                                                    <img src="{{asset($article->preview)}}" class="img-responsive"
+                                                         alt=""></a></li>
+                                            <li class="span_2-right">
+                                                <h4 style="color:#3c3c3c; font-weight: 600; font-size: medium">{{$article->title}}</h4>
+                                                @php($text=strip_tags($article->content))
+                                                {{$text}}
+                                            </li>
+                                            <div class="clearfix"></div>
+                                        </ul>
+
+                                    </td>
+                            </tr>
+                        @endif
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
+
+
             <div class="clearfix"></div>
 
         </div>
     </div>
 
-    <div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog">
             <button type="button" class="close hidden" data-dismiss="modal" aria-hidden="true">×</button>
             <div class="modal-content">
                 <div class="modal-body">
-                    <img src="" alt="" />
+                    <img src="" alt=""/>
                 </div>
             </div>
         </div>

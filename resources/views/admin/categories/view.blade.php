@@ -53,8 +53,12 @@
             <div class="col-md-3">
                 <br>
                 <div class="description small">
-                    <p>* Ullamcorper risus pellentesque lectus malesuada ut nulla, sapien potenti. Placerat rutrum,  mi Ridiculus congue platea. Cursus semper mi hymenaeos.</p>
-                    <p>* Pede accumsan turpis nisl convallis magnis placerat congue. Ultrices, ullamcorper maecenas elementum.</p>
+                    <p>* Категория - параметр, который используется только для раздела "Щенки".</p>
+                    <p>* При заполнении и редактировании сайта нужно придерживаться следующего правила: щенки должны иметь
+                        нечетную категорию (например: 1,3,5,...9), взрослые - чётную категорию (2,4,..10).</p>
+                    <p>* Для правильного отбражения страницы "Щенки" нужно придерживаться связки: щенок-взрослый
+                        (категории 1-2, 3-4,...7-8).
+                    </p>
 
                 </div>
             </div>
